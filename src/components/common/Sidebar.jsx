@@ -10,16 +10,14 @@ import { Box } from '@mui/system';
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { useDispatch, useSelector } from "react-redux";
-import storeApi from '../../api/storeApi';
-import { setStore }  from '../../redux/features/storeSlice';
+import { useSelector } from "react-redux";
+
 
 
 
 function Sidebar() {
   const [activeIndex, setActiveIndex] = useState(0);
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const { storeId } = useParams();
   const user = useSelector((state) => state.user.value);
   const stores = useSelector((state) => state.store.value);
@@ -36,16 +34,6 @@ function Sidebar() {
     setActiveIndex(activeIndex);
   }, [stores, storeId, navigate]);
 
-  const addSrore = async () => {
-    try {
-      const res = await storeApi.create();
-      const createSrores = [res, ...stores];
-      dispatch(setStore(createSrores));
-      navigate(`store/${res._id}`);
-    } catch(err) {
-      alert(err);
-    }
-  }
 
   return(
     <AppBar

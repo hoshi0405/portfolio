@@ -90,7 +90,6 @@ const Login = () => {
           sx={{ mt: 3, mb: 2 }}
           fullWidth type="submit"
           loading={loading}
-          color="primary"
           variant="outlined"
           color="success">
         アカウント作成

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ListItemButton,Typography } from '@mui/material'
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import storeApi from '../api/storeApi';
 import { setStore } from '../redux/features/storeSlice';
@@ -53,8 +53,6 @@ export const GetNearStore = (props) => {
     let latAvg = (lat1 + lat2) / 2.0;
     // 赤道半径
     let a = 6378137.0;
-    // 極半径
-    let b = 6356752.314140356;
     // 第一離心率^2
     let e2 = 0.00669438002301188;
     // 赤道上の子午線曲率半径
@@ -87,10 +85,6 @@ export const GetNearStore = (props) => {
 
   //エラー
   const geoError = () => {
-    let pos = {
-        latitude: 0,
-        longitude: 0
-    };
     console.log("取得失敗");
   };
 

@@ -1,4 +1,4 @@
-import { Box, Container } from '@mui/system';
+import { Box } from '@mui/system';
 import React, { useEffect } from 'react'
 import { Outlet, useNavigate } from "react-router-dom";
 import authUtils from '../../utils/authUils';
