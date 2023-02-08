@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.073c9b0a.css",
+    "main.js": "/static/js/main.75d104ba.js",
+    "static/media/ramen_moyashi.png": "/static/media/ramen_moyashi.9497731acfe3dc0f1a95.png",
+    "index.html": "/index.html",
+    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
+    "main.75d104ba.js.map": "/static/js/main.75d104ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.75d104ba.js"
+  ]
+}
