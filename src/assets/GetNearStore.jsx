@@ -154,7 +154,7 @@ export const GetNearStore = (props) => {
       ) : (
         ""
        )}
-        <ListItemButton　cpmponent={Link}　to={`/store`}>
+        <ListItemButton　cpmponent={Link}　to={`/`}>
         <Typography variant="body2" fontWeight="700">
                 一覧に戻る
          </Typography>
