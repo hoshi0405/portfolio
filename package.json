@@ -16,6 +16,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^1.2.2",
+    "dotenv": "^16.0.3",
     "emoji-mart": "^5.4.0",
     "react": "^17.0.2",
     "react-beautiful-dnd": "^13.1.0",
@@ -25,14 +26,14 @@
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.0",
     "styled-components": "^5.3.6",
-    "web-vitals": "^0.2.4",
-    "dotenv": "^16.0.3"
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "netlify": "netlify"
   },
   "eslintConfig": {
     "extends": [
@@ -51,5 +52,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "netlify-cli": "^12.13.1"
   }
 }
