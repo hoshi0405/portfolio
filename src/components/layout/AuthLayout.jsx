@@ -12,7 +12,7 @@ function AuthLayout() {
       // 認証チェック
       const isAuth = await authUtils.isAutenticated();
       if (isAuth) {
-        navigate("/");
+        navigate("/store");
       }
     };
     cheakAuth();
