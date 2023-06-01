@@ -1,7 +1,7 @@
 const PlaceSearchButton = (props) => {
   return (
     <button type="button" onClick={props.onClick}>
-      近くのラーメン
+      近くのラーメン二郎
     </button>
   );
 };

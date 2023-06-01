@@ -84,7 +84,7 @@ function Sidebar() {
             justifyContent: "space-between"
           }}>
             <Typography variant="body2" fontWeight="700">
-              お気に入り
+              あああ
             </Typography>
              <IconButton>
               <AddBoxOutlinedIcon fontSize="smail"/>
