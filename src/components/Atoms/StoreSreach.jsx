@@ -1,8 +1,8 @@
 const PlaceSearchButton = (props) => {
   return (
-    <a  onClick={props.onClick}>
+    <button type="button" style="color:#ff0000" onClick={props.onClick}>
       近くのラーメン二郎
-    </a>
+    </button>
   );
 };
 export default PlaceSearchButton;
