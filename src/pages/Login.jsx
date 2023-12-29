@@ -92,7 +92,7 @@ const Login = () => {
           loading={loading}
           variant="outlined"
           color="success">
-        アカウント作成
+        ログインする
       </LoadingButton>
     </Box>
     <Button component={Link} to="/register" color="success">アカウントを持っていませんか？</Button>

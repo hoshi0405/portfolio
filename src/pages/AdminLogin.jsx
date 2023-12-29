@@ -92,7 +92,7 @@ const AdminLogin = () => {
           loading={loading}
           color="success"
           variant="outlined">
-        アカウント作成
+        ログイン
       </LoadingButton>
     </Box>
     <Button component={Link} to="/adminregister" color="success">アカウントを持っていませんか？</Button>

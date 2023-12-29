@@ -63,7 +63,7 @@ function Sidebar() {
           </Box>
         </ListItemButton>
         <Box sx={{paddingTop: "10px"}}></Box>
-        <ListItemButton component={Link}　to={`/searchstore`}>
+        <ListItemButton component={Link} to={`/searchstore`}>
           <Box sx={{
             width: "100%",
             display: "flex",
