@@ -47,7 +47,7 @@ function Sidebar() {
           justifyContent: "space-between"
         }}
         >
-        <ListItemButton>
+        <ListItemButton component={Link} to={`/`}>
           <Box sx={{
             width: "100%",
             display: "flex",
@@ -76,7 +76,7 @@ function Sidebar() {
           </Box>
         </ListItemButton>
          <Box sx={{paddingTop: "10px"}}></Box>
-        <ListItemButton>
+        <ListItemButton component={Link} to={`/favorite`}>
           <Box sx={{
             width: "100%",
             display: "flex",

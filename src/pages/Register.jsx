@@ -22,9 +22,6 @@ const Register = () => {
     const username = data.get("username").trim();
     const password = data.get("password").trim();
     const confirmpassword = data.get("confirmpassword").trim();
-    console.log(username);
-    console.log(password);
-    console.log(confirmpassword);
 
     let error = false;
 

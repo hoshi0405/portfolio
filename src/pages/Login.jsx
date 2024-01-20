@@ -19,8 +19,6 @@ const Login = () => {
     const data = new FormData(e.target);
     const username = data.get("username").trim();
     const password = data.get("password").trim();
-    console.log(username);
-    console.log(password);
 
     let error = false;
 
@@ -50,7 +48,6 @@ const Login = () => {
       navigate("/");
     } catch (err) {
       const errors = err.data.errors;
-      console.log(errors);
       errors.forEach((err) => {
         if (err.param === "username") {
           setUsernameErrText(err.msg);

@@ -24,7 +24,7 @@ const Home = () => {
         const res = await storeApi.getAll();
         dispatch(setStore(res));
       } catch (err) {
-        alert(err);
+        console.log(err);
       }
     };
     getStores();
@@ -34,10 +34,10 @@ const Home = () => {
 
   return (
     <Box sx={{mt: "80px"}}>
-      {stores.map((item, index) => (
+      {stores.map((item) => (
         <ListItemButton
           key={item._id}
-          cpmponent={Link}
+          component={Link}
           sx={{ pl: "20px" }}
           to={`/store/${item._id}`}
           >
@@ -47,7 +47,6 @@ const Home = () => {
         </ListItemButton>
       ))}
     </Box>
-
     )
   }
 
