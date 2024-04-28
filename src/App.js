@@ -10,6 +10,7 @@ import AppLayout from './components/layout/AppLayout';
 import Home from './pages/Home';
 import Store from './pages/Store';
 import SearchStore from './pages/SearchStore';
+import Favorite from './pages/Favorite'
 import AdminAuthLayout from './components/layout/AdminAuth';
 import AdminLogin from './pages/AdminLogin';
 import AdminRegister from './pages/AdminRegister';
@@ -37,6 +38,7 @@ function App() {
             <Route path="store" element={<Home />} />
             <Route path="store/:storeId" element={<Store />} />
             <Route path="Searchstore" element={<SearchStore />} />
+            <Route path="favorite" element={<Favorite />} />
           </Route>
           <Route path="/" element={<AdminAuthLayout />}>
             <Route path="/adminlogin" element={<AdminLogin />} />

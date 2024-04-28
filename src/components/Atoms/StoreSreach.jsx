@@ -1,7 +1,12 @@
 const PlaceSearchButton = (props) => {
   return (
-    <button type="button" onClick={props.onClick}>
-      近くのラーメン二郎
+    <button style={{
+      backgroundColor:"#fff100",
+      marginLeft: "auto",
+      marginRight: "auto",
+      borderRadius: "100vh"
+    }} type="button" onClick={props.onClick}>
+      近くの二郎を検索
     </button>
   );
 };
