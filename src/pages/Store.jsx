@@ -11,6 +11,7 @@ import StarIcon from "@mui/icons-material/Star";
 
 
 
+
 function Store() {
   const dispatch = useDispatch();
   const { storeId } = useParams();
@@ -49,15 +50,16 @@ const handleFavorite = async () => {
   try {
     let newFavoriteStores = [...favoriteStores];
       await new Promise((resolve) => setTimeout(resolve, 500));
-      await storeApi.favorite(storeId);
+    const newStore = await storeApi.favorite(storeId);
 
     // 非同期処理が完了したら状態を更新
     if (isFavorite.includes(userId)) {
+      newFavoriteStores.pop(newStore)
       setIsFavorite([]);
     } else {
+      newFavoriteStores.push(newStore)
       setIsFavorite(userId);
     }
-
     dispatch(setFavoriteList(newFavoriteStores));
     } catch (err) {
       console.log(err);

@@ -30,7 +30,6 @@ const Favorite = () => {
 
   return (
      <>
-      <ListItemButton>
         <Box
           sx={{
             mt: "80px",
@@ -40,11 +39,8 @@ const Favorite = () => {
             width: "100",
           }}
         >
-          <Typography variant="body2" fontWeight="700">
-            お気に入りの店舗
-          </Typography>
+          <p>お気に入りの店舗</p>
         </Box>
-      </ListItemButton>
       {stores.map((item) => (
         <ListItemButton
           component={Link}
