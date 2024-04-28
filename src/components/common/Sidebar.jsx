@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   AppBar,
   IconButton,
@@ -6,33 +6,18 @@ import {
   ListItemButton,
   Typography,
 } from "@mui/material";
-import { Box } from '@mui/system';
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
-import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
 
-
-
-
 function Sidebar() {
-  const [activeIndex, setActiveIndex] = useState(0);
   const navigate = useNavigate();
-  const { storeId } = useParams();
   const user = useSelector((state) => state.user.value);
-  const stores = useSelector((state) => state.store.value);
 
   const logout = () => {
     localStorage.removeItem("token");
     navigate("/login");
   };
-
-
-
-  useEffect(() => {
-    const activeIndex = stores.findIndex((e) => e._id === storeId);
-    setActiveIndex(activeIndex);
-  }, [stores, storeId, navigate]);
 
 
   return(
@@ -48,48 +33,22 @@ function Sidebar() {
         }}
         >
         <ListItemButton component={Link} to={`/`}>
-          <Box sx={{
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between"
-          }}>
-            <Typography variant="body2" fontWeight="700">
-              {user.username}
-            </Typography>
-            <IconButton onClick={logout}>
-              <LogoutOutlinedIcon fontSize="small"/>
-            </IconButton>
-          </Box>
+          <Typography variant="body2" fontWeight="700">
+            {user.username}
+          </Typography>
+          <IconButton onClick={logout}>
+            <LogoutOutlinedIcon fontSize="small"/>
+          </IconButton>
         </ListItemButton>
-        <Box sx={{paddingTop: "10px"}}></Box>
         <ListItemButton component={Link} to={`/searchstore`}>
-          <Box sx={{
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between"
-          }}>
-            <Typography variant="body2" fontWeight="700">
-              店舗検索
-            </Typography>
-          </Box>
+          <Typography variant="body2" fontWeight="700">
+            店舗検索
+          </Typography>
         </ListItemButton>
-         <Box sx={{paddingTop: "10px"}}></Box>
         <ListItemButton component={Link} to={`/favorite`}>
-          <Box sx={{
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between"
-          }}>
-            <Typography variant="body2" fontWeight="700">
-              お気に入り
-            </Typography>
-             <IconButton>
-              <AddBoxOutlinedIcon fontSize="smail"/>
-            </IconButton>
-          </Box>
+          <Typography variant="body2" fontWeight="700">
+            お気に入り
+          </Typography>
         </ListItemButton>
       </List>
       </AppBar>
