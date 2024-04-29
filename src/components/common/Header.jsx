@@ -10,7 +10,7 @@ import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
 
-function Sidebar() {
+function Header() {
   const navigate = useNavigate();
   const user = useSelector((state) => state.user.value);
 
@@ -40,12 +40,12 @@ function Sidebar() {
             <LogoutOutlinedIcon fontSize="small"/>
           </IconButton>
         </ListItemButton>
-        <ListItemButton component={Link} to={`/searchstore`}>
+        <ListItemButton sx={{ display: "inline-block" }} component={Link} to={`/searchstore`}>
           <Typography variant="body2" fontWeight="700">
             店舗検索
           </Typography>
         </ListItemButton>
-        <ListItemButton component={Link} to={`/favorite`}>
+        <ListItemButton sx={{ display: "inline-block" }} component={Link} to={`/favorite`}>
           <Typography variant="body2" fontWeight="700">
             お気に入り
           </Typography>
@@ -55,4 +55,4 @@ function Sidebar() {
   )
 }
 
-export default Sidebar
+export default Header

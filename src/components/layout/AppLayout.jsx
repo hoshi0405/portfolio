@@ -2,7 +2,7 @@ import { Box } from '@mui/system';
 import React, { useEffect } from 'react'
 import { Outlet, useNavigate } from "react-router-dom";
 import authUtils from '../../utils/authUils';
-import Sidebar from '../common/Sidebar';
+import Header from '../common/Header';
 import {useDispatch } from"react-redux"
 import { setUser } from '../../redux/features/userSlice';
 
@@ -28,7 +28,7 @@ function AppLayout() {
   return (
     <div>
       <Box sx={{ display: "flex" }}>
-        <Sidebar/>
+        <Header/>
         <Box sx={{flexGrow: 1,p: 1, width: "max-content"}}>
           <Outlet/>
 

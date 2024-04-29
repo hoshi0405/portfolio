@@ -21,6 +21,7 @@ export const GetNearStore = (props) => {
   const jsonStore = JSON.parse(result);
 
 
+
   useEffect(() => {
     const getstore = async () => {
       try {
@@ -138,7 +139,7 @@ export const GetNearStore = (props) => {
           {0 < posts.length ? (
              posts.map((item) => (
                <li key={item._id}>
-                  <ListItemButton　cpmponent={Link}　to={`/store/${item._id}`}>
+                  <ListItemButton component={Link} to={`/store/${item._id}`}>
                     <Typography variant="body2" fontWeight="700">
                       {item.title}
                     </Typography>
@@ -154,7 +155,7 @@ export const GetNearStore = (props) => {
       ) : (
         ""
        )}
-        <ListItemButton　cpmponent={Link}　to={`/`}>
+        <ListItemButton component={Link} to={`/`}>
         <Typography variant="body2" fontWeight="700">
                 一覧に戻る
          </Typography>
