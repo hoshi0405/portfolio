@@ -6,6 +6,7 @@ import {
   ListItemButton,
   Typography,
 } from "@mui/material";
+import MarkunreadIcon from '@mui/icons-material/Markunread';
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
@@ -50,9 +51,11 @@ function Header() {
             お気に入り
           </Typography>
         </ListItemButton>
+        <ListItemButton sx={{ display: "inline-block" }} target="_blank" to={`https://docs.google.com/forms/d/e/1FAIpQLSeWp2QFciRxvFm2d-GpftkqHA3724vE3dUNsMGsxKZFH3R5NQ/viewform?usp=pp_url`}>
+          <MarkunreadIcon fontSize="sm"/>
+        </ListItemButton>
       </List>
       </AppBar>
   )
 }
-
 export default Header
