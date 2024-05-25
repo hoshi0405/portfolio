@@ -85,13 +85,13 @@ const handleFavorite = async () => {
             )}
       </IconButton>
       <Typography>{title}</Typography>
-
       <ListItemButton cpmponent={Link} to={`/store`}>
         <Typography variant="body2" fontWeight="700">
            戻る
         </Typography>
      </ListItemButton>
-   </Box>
+    </Box>
+    <Typography variant="body2" fontWeight="700">マップ内の店舗名をタップ</Typography>
     <LoadScript googleMapsApiKey={apiKey}>
       <GoogleMap mapContainerStyle={containerStyle} center={{ lat: +latitude, lng: + longitude}} zoom={19}>
         <Marker position={ {lat: +latitude, lng: + longitude } }/>
