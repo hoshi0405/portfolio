@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import storeApi from '../api/storeApi';
 import { setStore } from '../redux/features/storeSlice';
-
-
-
+import RamenDiningIcon from '@mui/icons-material/RamenDining';
 
 export const GetNearStore = (props) => {
   //5km以下のもの
@@ -131,20 +129,22 @@ export const GetNearStore = (props) => {
     setFirst(false);
   }, [latitude, longitude, props.ShowStore]);
 
-   return (
+  return (
     <div>
-      <p>現在位置から5km以内のラーメン二郎</p>
+        <Typography variant="body2" fontWeight="700">
+          現在位置から5km以内のラーメン二郎
+        </Typography>
       {!first ? (
         <ul>
           {0 < posts.length ? (
-             posts.map((item) => (
-               <li key={item._id}>
-                  <ListItemButton component={Link} to={`/store/${item._id}`}>
-                    <Typography variant="body2" fontWeight="700">
+            posts.map((item) => (
+              <li key={item._id}>
+                <ListItemButton component={Link} to={`/store/${item._id}`}>
+                  <Typography variant="body2" fontWeight="700">
+                    <RamenDiningIcon />
                       {item.title}
-                    </Typography>
-                  </ListItemButton>
-                <p>{item.title}</p>
+                  </Typography>
+                </ListItemButton>
                 <p>現在位置との距離 : 約{dataShaping(item.result)}m</p>
               </li>
             ))
@@ -154,12 +154,12 @@ export const GetNearStore = (props) => {
         </ul>
       ) : (
         ""
-       )}
+      )}
         <ListItemButton component={Link} to={`/`}>
-        <Typography variant="body2" fontWeight="700">
-                一覧に戻る
-         </Typography>
-         </ListItemButton>
+          <Typography variant="body2" fontWeight="500">
+            一覧に戻る
+          </Typography>
+        </ListItemButton>
     </div>
   );
 };
